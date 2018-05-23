@@ -20,5 +20,6 @@ RUN mkdir -p "$HOME/src"
 
 WORKDIR /usr/local/build/src
 
-CMD makepkg -sfc --noconfirm --needed && \
+CMD sudo pacman -Sy && \
+    makepkg -sfc --noconfirm --needed && \
     makepkg --printsrcinfo > .SRCINFO
