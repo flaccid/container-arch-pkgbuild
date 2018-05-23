@@ -5,7 +5,7 @@ MAINTAINER Chris Fordham <chris@fordham.id.au>
 RUN pacman-key --init && \
     pacman-db-upgrade && \
     update-ca-trust && \
-    pacman -Syu --noconfirm base-devel git archlinux-keyring && \
+    pacman -Syyu --noconfirm base-devel git archlinux-keyring && \
     useradd -d /usr/local/build -m -G wheel build
 
 COPY sudoers.d/build /etc/sudoers.d/
