@@ -31,7 +31,7 @@ WORKDIR /usr/local/build/src
 
 COPY docker-entrypoint.sh /opt/bin/docker-entrypoint.sh
 
-ENTRYPOINT /opt/bin/docker-entrypoint.sh
+ENTRYPOINT ["/opt/bin/docker-entrypoint.sh"]
 
 CMD sudo pacman -Sy && \
     makepkg -sfc --noconfirm --needed && \
